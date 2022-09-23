@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;500;600&display=swap');
+
+:root{
+    --white: #ffffff;
+    --cyan: #55c0ec;
+    --primary-font-color: #3f3f3f;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Signika', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+
+
+}
+body{
+    line-height: 1.5;
+}
+
+/*utility*/
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.btn{
+    width: 300px;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    border-radius: 0.2rem;
+    margin: auto;
+    transition: all .8s ease-in-out;
+
+}
+.btn p,
+.btn strong{
+    font-size: 1.6rem;
+
+}
+.primary-title,
+.primary-title span{
+    font-size: 5rem;
+    margin-top: 0;
+    line-height: 1;
+    letter-spacing: -.18rem;
+}
+.secondary-title,
+.secondary-title strong{
+    font-size: 2.5rem;
+    letter-spacing: -0.125rem;
+    color: var(--primary-font-color);
+    line-height: 1.2;
+}
+.even-column,
+.single-column{
+    padding: 1rem;
+}
+p span{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+p, i{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.p-1rem{
+    padding: 1rem 0;
+}
+.p-2rem{
+    padding: 2rem 0;
+}
+.mb-1rem{
+    margin-bottom: 1rem;
+}
+.mb-2rem{
+    margin-bottom: 2rem;
+}
+.mt-2rem{
+    margin-top: 2rem;
+}
+.center{
+    text-align: center;
+}
+.fw-300{
+    font-weight: 300;
+}
+.underline{
+    width: 50%;
+    margin: auto;
+    height: 3px;
+    margin-top: 0px;
+    background-color: var(--cyan);
+    border: none;
+}
+
+code{
+    background-color: #ededed;
+    color: #dc1940;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    border-radius: 0.2rem;
+}
+
+/*End of utility*/
+nav{
+    background-color: var(--primary-font-color);
+}
+.nav-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.nav-link{
+    text-decoration: none;
+    color: #ffd05a;
+    transition: color 0.3s ease-in-out;
+
+}
+.nav-item{
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.nav-link:hover{
+    color: var(--white);
+}
+.hero{
+    background-color: #55c0ec;
+}
+.hero__title{
+    color: var(--primary-font-color);
+    position: relative;
+    animation: reveal 1s ease-in;
+
+}
+.hero__phrase{
+    color: var(--white);
+    font-size: 1.75rem;
+    line-height: 1.25;
+    position: relative;
+    top:-1rem;
+    animation: reveal 1s ease-in;
+    animation-delay: 0.3s;
+
+
+}
+.hero__btn{
+    background-color: var(--white);
+    text-align: center;
+    color: var(--primary-font-color);
+    position: relative;
+    animation: reveal 1s ease-in;
+    animation-delay: 0.6s;
+
+}
+.hero svg{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    animation: reveal 1s ease-in;
+    animation-delay: 1s;
+
+}
+
+.about{
+    color: var(--primary-font-color);
+}
+.features{
+    background-color: #90ddaa;
+}
+.features__card{
+    padding: 2rem;
+    opacity: 0;
+}
+
+.features__img-container{
+    background-color: #40596b;
+    padding: 3rem;
+    margin: 0;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+
+}
+.features__desc-container{
+    background-color: var(--white);
+    margin: 0;
+}
+.features__card p{
+    padding: 1.5rem;
+    color: var(--primary-font-color);
+}
+
+.cta__btn{
+    background-color: #40596b;
+    color: var(--white);
+}
+.footer{
+    background-color: #40596b;
+    color: var(--white);
+    text-align: center;
+}
+
+.footer p>small{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.head{
+    animation-name: scale-head;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    transform-origin: 50% 25%;
+}
+.btn_back-to-top{
+    background-color: #ffd05a;
+    border: none;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    z-index: 99;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    display: none;
+    
+}
+
+@keyframes scale-head {
+    0%, 40%, 60%, 100%{
+        transform: rotate(0deg) scale(1) ;
+    
+    }
+    7%, 35%{
+        transform: rotate(10deg) scale(1) ;
+    }
+    48%, 52%{
+        transform: rotate(0deg) scale(0.9);
+    }
+    65%, 93%{
+        transform: rotate(-10deg) scale(1) ;
+    }
+}
+
+@keyframes reveal{
+    from{
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;    
+        visibility: visible;
+    }
+}
+    
+@media all and (min-width:600px){
+    .hero .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .slack-logo{
+        transition: all .8s ease;
+    }
+
+    .btn:hover .slack-logo{
+        transform: rotate(45deg) scale(1.4);
+    }
+    .even-column{
+        flex: 1;
+        align-self: center;
+    }
+    .even-column svg{
+        height: 400px;
+        width: 400px;
+    }
+    .underline{
+        width: 12%;
+    }
+    .container__inner{
+        display: flex;
+    }
+    .features__img-container img{
+        max-width: 224px;
+        height: 224px;
+    }
+    .features__desc-container p{
+        max-width: 26ch;
+        margin: auto;
+    }
+    .cta .single-column p{
+        max-width: 50ch;
+        margin: auto;
+    }
+    .hero__btn:hover{
+        opacity: 0.7;
+    }
+    .cta__btn:hover{
+        background-color: var(--primary-font-color);
+    }
+
+}
